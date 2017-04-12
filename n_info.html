@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+      <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="css/main.css" rel="stylesheet" />
+	<!--Adaptive styles-->
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
+    <!-- Include the AngularJS library -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"</script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+
+	
+  </head>
+  <body ng-app="myApp" class="bg">
+     <header class="header">
+	     <div class="navigator">
+			<div class="site_logo">
+			<h1>Lorem</h1>
+			    <!--<img src="Assets/imgs/"><a href="#"></a>-->
+			</div>
+		 </div>
+	 </header>
+     <section class="main" ng-controller="MainController">
+	    <div class="section_header">
+		    <div class="section_title">
+				<h1> {{ section_title }} </h1>
+			</div>
+		<div>
+		</div class="menu_section">
+			<span id="span1"></span><span id="span2"></span>
+		    <ul ng-repeat="menu in menus">
+			    <a href= "{{ menu.href }}" ><li> {{ menu.item }}</li></a>
+			</ul>
+		</div>
+		
+		<div class="main_n_info">
+		    <div class="column_one">
+			    <img src="Assets/imgs/girl_jump.jpg" id="girl_jump">
+				<img class="img_opacity" ng-src="Assets/imgs/hon_cran_pak.jpeg" src="Assets/imgs/hon_cran_pak.jpeg">
+				<span>Honey & Cranberry Water</span>
+				<div class="content">
+				   <p>Our Honey and Cranberry is no accident. We have worked really hard to avoid the use of conventional additives such as abcorbic acid, colouring and natural flavourings.</p>
+				   <p>The honey and cranberries give the drink its unique flavour and great taste, whilst the cranberries double up as a natural preservative due to its naturally occuring 
+					acids which helps to keep the PH level at below 4.2 but unlike citrus fruits the tartness is very mild.</p>
+			    </div>
+			</div>
+		    <div class="column_two">
+			    <h3>Our Ingredients</h3>
+				<div class="honey_content">
+				    <span id="span1"></span><span id="span2">Honey contains a host of nutrients which are good for us such as vitamins, trace enzymes, amino acids and minerals like calcium, iron, nagnesium, phosphate and potassium
+					as well as flavonoids and phenolic compounds which are all good for maintaining healthy body cells in our body
+					</span>
+					<span id="span3"></span>
+				</div>
+				<div class="cran_content">
+				    <span id="span4"></span><span id="span5">Cranberries are one of the top antioxidant rich foods available to us. They have more antioxidants ounce-for-ounce than other 'superfoods'
+					such as Spinach, blueberiies or blackberries. They are also known to help prevent urinary tract infections.
+					</span>
+					<span id="span6"></span>
+				</div>
+				<div class="chrys_content">
+				    <span id="span7"></span><span id="span8">Chrysanthemum flowers and buds have been usd for making tea by infusing the flowers or buds in hot water, which then helps to release a wide variety of antioxidants, vitamins,
+					minerals and amino acids making for a highly nutritious drink. It is known to help lower blood pressure and cholesterol in the body.
+					</span>
+					<span id="span9"></span>
+				</div>
+				<div class="cin_content">
+				    <span id="span10"></span><span id="span11">Cinnamon is a spice which has a sweet aroma. Cinnamon is also loaded ith antioxidants and its uniquw properties hace been recognised for its healthy effects inthe body, such as r
+					educing LDL 'bad' cholesterol whilst helping to increase HDL 'good' cholesterol. It is known to also help lower blood sugar level.
+					</span>
+					<span id="span12"></span>
+				</div>
+			</div>
+			<div class="column_three">
+			    <img src="Assets/imgs/bee_family.jpg">
+				<img class="img_opacity" ng-src="Assets/imgs/cin_chrys_pak.jpeg" src="Assets/imgs/cin_chrys_pak.jpeg">
+				<span>Crysanthemum, Cinnamon & Honey</span>
+				<div class="content">
+				   <p>Our Honey and Cranberry is no accident. We have worked really hard to avoid the use of conventional additives such as abcorbic acid, colouring and natural flavourings.</p>
+				   <p>The honey and cranberries give the drink its unique flavour and great taste, whilst the cranberries double up as a natural preservative due to its naturally occuring 
+					acids which helps to keep the PH level at below 4.2 but unlike citrus fruits the tartness is very mild.</p>
+			    </div>
+			</div>
+		</div>
+	 </section>
+	 <footer class="footer">
+	    <p> © 2017 by Beeyond Water.<span style="text-decoration:underline;"><a href="#"> Conditions for Use</a></span></p>
+			<div class="social_box" >
+				<img src="Assets/icons/facebook.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/twitter.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/linkedin.png">
+			</div>
+		
+	 </footer>
+	
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controller/MainController.js"></script>
+	<script src="scripts/main.js"></script>
+  </body>
+</html>

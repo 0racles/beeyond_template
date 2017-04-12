@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="css/main.css" rel="stylesheet" />
+	<!--Adaptive styles-->
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
+    <!-- Include the AngularJS library -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"</script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+
+	
+  </head>
+  <body ng-app="myApp" class="bg">
+     <header class="header">
+	     <div class="navigator">
+			<div class="site_logo">
+			<h1>Lorem</h1>
+			    <!--<img src="Assets/imgs/"><a href="#"></a>-->
+			</div>
+		 </div>
+	 </header>
+     <section class="main" ng-controller="MainController">
+	    <div class="section_header">
+		    <div class="section_title">
+				<h1> {{ section_title }} </h1>
+			</div>
+			<div class="menu_section">
+				<span id="span1"></span><span id="span2"></span>
+				<ul ng-repeat="menu in menus">
+					<a href= "{{ menu.href }}" ><li> {{ menu.item }}</li></a>
+				</ul>
+			</div>
+			<div class="contact_pane">
+				<h2>FIND US</h2>
+				<h4>Beeyond Water Ltd</h4>
+				<p>London<br>contact@beeyondwater.com<br>@beeyondwater</p>
+				<h1>Call Us Today<br>07-94000-5541</h1>
+			</div>
+			<form class="form_pane">
+			    <input type="text" placeholder="Name">
+				<input type="text" placeholder="Email">
+				<input type="text" placeholder="Subject">
+				<input type="textarea" placeholder="Write us a message" id="textarea">	
+				<a href="find_us.html" type="submit" class="test">Send</a>
+			</form>
+			<div class="bee_map" id="bee_map"></div>
+		
+		</div>
+	 </section>
+	 <footer class="footer">
+	    <p> © 2017 by Beeyond Water.<span style="text-decoration:underline;"><a href="#"> Conditions for Use</a></span></p>
+			<div class="social_box" >
+				<img src="Assets/icons/facebook.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/twitter.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/linkedin.png">
+			</div>
+		
+	 </footer>
+	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?keyAIzaSyDuKxmoTalAtaQLggmgL7VnYnntHajaLQ8&libraries=places,geometry"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controller/MainController.js"></script>
+	<script src="scripts/main.js"></script>
+  </body>
+</html>
