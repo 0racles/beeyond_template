@@ -53,7 +53,7 @@ app.controller('MainController', ['$scope', function ($scope) {
 		{
 			image : 'Assets/imgs/cin_chrys_pak.jpeg',
 			plus : '',
-			name : 'Finshed Product'
+			name : 'Finished Product'
 		}
 		];
 		/*$scope.icons = [
