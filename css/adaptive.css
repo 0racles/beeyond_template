@@ -359,7 +359,8 @@ section.main div.matrix_gallery div.img_blocks span {
     width: 100px;
     height: 87px;
     font-size: 12px !important;
-	left: 7px !important;
+    left: 7px !important;
+    padding: 30% 2%;
 	}
     
 }
