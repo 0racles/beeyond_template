@@ -67,6 +67,15 @@ Last change:    24/02/15
   .main div.black_board #pin_img1 {
     right: -94%;
 	}
+	
+  .s13imageItemzoom {
+    width: 160px;
+    height: 160px;
+    top: 13px !important;
+    right: 0px;
+    bottom: 10px;
+    left: 15px !important;
+  }
 
 }
 /*------------------------------------------------------------------
@@ -110,6 +119,15 @@ Last change:    24/02/15
   #carousel_img3 {
 	  display : block;
 	  height : 100%;
+  }
+  
+  .s13imageItemzoom {
+    width: 160px;
+    height: 160px;
+    top: 13px !important;
+    right: 0px;
+    bottom: 10px;
+    left: 15px !important;
   }
 }
 
@@ -160,6 +178,15 @@ section.main div.matrix_gallery div.img_blocks span {
 	  display : block;
 	  height : 100%;
   }
+  
+ .s13imageItemzoom {
+    width: 160px;
+    height: 160px;
+    top: 13px !important;
+    right: 0px;
+    bottom: 10px;
+    left: 15px !important;
+  }
 	
 }
 
@@ -193,6 +220,15 @@ section.main div.matrix_gallery div.img_blocks span {
     .main div.black_board #pin_img1 {
     right: -93%;
 	}
+	
+	.s13imageItemzoom {
+    width: 160px;
+    height: 160px;
+    top: 13px !important;
+    right: 0px;
+    bottom: 10px;
+    left: 15px !important;
+  }
 	
 }
 
@@ -244,6 +280,17 @@ section.main div.matrix_gallery div.img_blocks span {
 	left: 100%;
 	font-size: 25px;
 }
+
+.s13imageItemzoom {
+    width: 101px;
+    height: 118px;
+    top: 13px !important;
+	right: 0px;
+    left: 9px !important;
+	bottom: 10px;
+    font-size: 13px !important;
+}
+
 }
 
 /*------------------------------------------------------------------
@@ -306,6 +353,13 @@ section.main div.matrix_gallery div.img_blocks span {
 	
 	div.section_header h1 {
     font-size: 20px;
+	}
+	
+	.s13imageItemzoom {
+    width: 100px;
+    height: 87px;
+    font-size: 12px !important;
+	left: 7px !important;
 	}
     
 }
@@ -371,6 +425,14 @@ section.main div.matrix_gallery div.img_blocks span {
   .main div.bee_map {
     top: 70px;
   }
+  
+  .s13imageItemzoom {
+    font-size: 10px !important;
+	width: 85px;
+    height: 85px;
+    top: 6px !important;
+	padding : 30px 2px;
+	}
 }
 
 /*------------------------------------------------------------------
@@ -417,101 +479,4 @@ section.main div.matrix_gallery div.img_blocks span {
   }
 }
 
-/*------------------------------------------------------------------
-[11. 690 / #690]
-*/
-@media (max-width: 690px) {
-    
-}
 
-/*------------------------------------------------------------------
-[12. 640 / #640]
-*/
-@media (max-width: 640px) { 
-
-}
-
-/*------------------------------------------------------------------
-[13. 650 / #650]
-*/
-@media (max-width: 650px) {
-   
-
-}
-
-/*------------------------------------------------------------------
-[14. 600 / #600]
-*/
-
-}
-
-/*------------------------------------------------------------------
-[15. 550 / #550]
-*/
-@media (max-width: 550px) {
-   
-}
-
-/*------------------------------------------------------------------
-[16. 500 / #500]
-*/
-@media (min-width: 500px) {
- 
-}
-
-/*------------------------------------------------------------------
-[16b. 500 / #500]
-*/
-@media (min-width: 350px) and (max-width : 399px) {
-  
-}
-
-/*------------------------------------------------------------------
-[16c. 500 / #500]
-*/
-@media (min-width: 400px) and (max-width : 444px) {
-  
-}
-/*------------------------------------------------------------------
-[16d. 500 / #500]
-*/
-@media (min-width: 445px) and (max-width : 485px) {
-  
-}
-/*------------------------------------------------------------------
-[17. 500 / #500]
-*/
-@media (max-width: 500px) {
-
-
-}
-
-
-/*------------------------------------------------------------------
-[18. 400 / #400]
-*/
-@media (max-width: 400px) {
-   
-   
-}
-/*------------------------------------------------------------------
-[19. 350 / #350]
-*/
-@media (max-width: 350px) {
-  
-}
-
-/*------------------------------------------------------------------
-[20. 315 / #315]
-*/
-@media (max-width: 315px) {
-  
-}
-
-
-/*------------------------------------------------------------------
-[20. 300 / #300]
-*/
-@media (max-width: 300px) {
- 
-}
