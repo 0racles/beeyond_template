@@ -76,6 +76,52 @@ Last change:    24/02/15
     bottom: 10px;
     left: 15px !important;
   }
+  
+   .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 393.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 393.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 393.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 393.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
 
 }
 /*------------------------------------------------------------------
@@ -129,6 +175,52 @@ Last change:    24/02/15
     bottom: 10px;
     left: 15px !important;
   }
+  
+   .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 373.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 373.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 373.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 373.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
 }
 
 /*------------------------------------------------------------------
@@ -187,6 +279,52 @@ section.main div.matrix_gallery div.img_blocks span {
     bottom: 10px;
     left: 15px !important;
   }
+  
+    .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 333.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 333.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 333.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 333.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
 	
 }
 
@@ -229,6 +367,52 @@ section.main div.matrix_gallery div.img_blocks span {
     bottom: 10px;
     left: 15px !important;
   }
+  
+    .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 303.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 303.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 303.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 303.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
 	
 }
 
@@ -289,6 +473,52 @@ section.main div.matrix_gallery div.img_blocks span {
     left: 9px !important;
 	bottom: 10px;
     font-size: 13px !important;
+}
+
+  .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 253.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 253.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 253.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 253.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
 }
 
 }
@@ -362,6 +592,52 @@ section.main div.matrix_gallery div.img_blocks span {
     left: 7px !important;
     padding: 30% 2%;
 	}
+	
+	  .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 203.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 203.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 203.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 203.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
     
 }
 /*------------------------------------------------------------------
@@ -434,6 +710,52 @@ section.main div.matrix_gallery div.img_blocks span {
     top: 6px !important;
 	padding : 30px 2px;
 	}
+	
+	  .paper_one::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 153.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_one::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 153.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
+  
+   .paper_three::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 153.64px;
+    position: absolute;
+    z-index: -1;
+    background: #ccc;
+    transform: rotate(4deg);
+}
+  
+  .paper_three::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 153.64px;
+    position: absolute;
+    z-index: -2;
+    background: #ccc;
+    transform: rotate(-4deg);
+    top: 0;
+}
 }
 
 /*------------------------------------------------------------------
