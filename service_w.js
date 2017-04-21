@@ -9,7 +9,7 @@ this.addEventListener("install", function (event) {
           'manifest.json',
           'scripts/app.js',
           'scripts/main.js',
-          'scripts/controller/mainController.js',
+          'scripts/controller/MainController.js',
           'scripts/libs/angular.js',
           'css/adaptive.css',
           'css/main.css',
