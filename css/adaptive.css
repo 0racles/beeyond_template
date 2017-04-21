@@ -762,6 +762,11 @@ section.main div.matrix_gallery div.img_blocks span {
 [6. 992 / #992]
 */
 @media only screen and  (min-width: 400px) and (max-width: 749px) {
+ .bg {
+    /*background: url(../Assets/imgs/farm.jpg) no-repeat fixed 0% 100% !important;*/
+	background: rgb(63, 97, 63)!important;
+}	
+	
  .main {
 	float: left;
     top: 0;
@@ -770,6 +775,10 @@ section.main div.matrix_gallery div.img_blocks span {
     background: #fff;
     min-height: 100%;
 	padding-bottom: 80px;
+ }
+ 
+ div.section_header h1 {
+    display : none;
  }
  
  section.main div.slide_box {
@@ -1026,9 +1035,10 @@ div.info_paper {
 [7. 990 / #990]
 */
 
-@media only screen and  (max-width: 399px) {
+@media only screen and (max-width: 399px) {
 	.bg {
-    background: url(../Assets/imgs/farm.jpg) no-repeat fixed 0% 100% !important;
+    /*background: url(../Assets/imgs/farm.jpg) no-repeat fixed 0% 100% !important;*/
+	background: rgb(63, 97, 63)!important;
 }
 	
 	.main {
@@ -1039,6 +1049,10 @@ div.info_paper {
     background: #fff;
     min-height: 100%;
 	padding-bottom: 80px;
+ }
+ 
+ div.section_header h1 {
+    display : none;
  }
  
  section.main div.slide_box {
