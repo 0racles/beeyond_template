@@ -30,5 +30,6 @@
 "start_url" : "index.html",
 "display" : "standalone", 
 "background_color" : "#fff",
-"theme_color" : "#e73931"
+"theme_color" : "#e73931",
+"gcm_sender_id" : "562428183414"
 }

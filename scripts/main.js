@@ -1,5 +1,28 @@
 var app = (function () {
-var img_blocks = document.querySelector(".img_blocks"),
+const applicationServerPublicKey = 'AAAAgvNVA3Y:APA91bH6Bd1pZWYOVmGkVBWdESubz20V_A4yzyj4SKshinAUWwxDuAe-YBCLy9IWJD0iw_DZuySeTZaBV-CLUHyW-aTZhBXbdQfVLkcRzBt6_i_ez6tGW-jz8HwtfVzuR434c8fsi2-q';
+
+const pushButton = document.querySelector('.js-push-btn');
+
+let isSubscribed = false;
+let swRegistration = null;
+
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}		
+
+var 
+img_blocks = document.querySelector(".img_blocks"),
 bee_map = document.getElementById("bee_map"),
 get_user_position,
 newLocation,
@@ -76,11 +99,77 @@ initialize_geo = function (callback) {
     positionError = function () {
       console.log("sorry your postion cannot be found at this time");
     },
+	
+	// request user permission
+	initialize_ui = function() {
+	swreg.pushManager.getSubscription().then(function(sub) {
+		isSubscribed = !(sub === null);
+		if (isSubscribed) {
+		var sub_button = bad_button_form.getElementsByTagName("BUTTON")[0],
+		    unsub_button = bad_button_form.getElementsByTagName("BUTTON")[1];
+			sub_button.disabled = true;
+			unsub_button.disabled = false;
+            unsub_button.title = "disable push messages";
+			
+			unsub_button.addEventListener("click", unsubscribe);
+			//swreg.pushManager.unSubscribe();
+			
+		} else {
+			// enable subscription button
+			var 
+			push_not = documennt.querySelector(".push_not_div"),
+			sub_button = push_not.getElementsByTagName("BUTTON")[0],
+		    unsub_button = push_not.getElementsByTagName("BUTTON")[1];
+			sub_button.disabled = false;
+			unsub_button.disabled = true;
+            sub_button.title = "Enable push messages";
+	        console.log('user is not subscribed');
+			
+			sub_button.addEventListener("click", subscribeUser);
+		}
+	})
+},
+	
+	// subscribe user to push Notification
+	
+subscribeUser = function() {
+  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+  swreg.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: applicationServerKey
+  })
+  .then(function(subscription) {
+    console.log('User is subscribed: this is the new addition', subscription);
+    event.preventDefault();
+    console.log('User is subscribed:', subscription);
+    //thank_you();
+   
+    //updateSubscriptionOnServer(subscription);
+
+    isSubscribed = true;
+
+   
+  })
+  .catch(function(err) {
+    console.log('Failed to subscribe the user: ', err);
+    
+  });
+},
+
+unsubscribe = function () {
+	swreg.pushManager.getSubscription().then(function(pushSubscription) {
+		pushSubscription.unsubscribe();
+	}).catch(function (e) {
+		window.Demo.debug.log("unsubscription error: ", e);
+	})
+},
+
     
 
 init = function () {
 	//google.maps.event.addDomListener(window, "load", initialize_geo(get_user_position));
 	initiate_sw();
+	initialize_ui();
 };
 
  return {
