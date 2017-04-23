@@ -70,6 +70,10 @@ app.controller('MainController', ['$scope', function ($scope) {
 			img : 'Assets/icons/googleplus.png'
 		}
 		];*/
+		$scope.ind_images = {
+			beeyond_logo : "Assets/imgs/beeyond_w.png",
+			not_bell : "Assets/icons/not_bell.png"
+		};
 		$scope.about = "Call Us SIMPLE!!";
 		$scope.about_paragraph = "Beeyond Water is made for those who love drinking an all natural product. Beeyond Water is made with only natural ingredients and nothing else!";
 }]);

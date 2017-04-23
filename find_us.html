@@ -57,6 +57,22 @@
 		
 		</div>
 	 </section>
+	 <a href="#" type="submit" data-toggle="modal" data-target="#myModal" id="not_button" ng-controller="MainController"><img ng-src = "{{ind_images.not_bell }}"> </a>
+	 <div id="myModal" class="modal fade" role="dialog" ng-controller="MainController">
+		<div class="modal-dialog">
+		
+		<div class="modal-content">
+			<div class="modal-header" >
+               <img ng-src = "{{ ind_images.beeyond_logo }}" >
+            </div>
+			<div class="push_not_div">
+				Would you like to receive updates from us?<br>
+				<button id="sub_button">Yes</button>
+				<button id="unsub_button">No</button>		
+			</div>
+		</div>
+		</div>
+	</div>
 	 <footer class="footer">
 	    <p> © 2017 by Beeyond Water.<span style="text-decoration:underline;"><a href="#"> Conditions for Use</a></span></p>
 			<div class="social_box" >
