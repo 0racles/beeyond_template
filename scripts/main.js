@@ -5,6 +5,20 @@ get_user_position,
 newLocation,
 i = 0,
 
+initiate_sw =function () {
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+	   console.log("service worker and push is supported!");
+  navigator.serviceWorker.register('service_w.js').then(function (reg) {
+	 console.log('service worker is registered', reg); 
+	swreg = reg;
+  }).catch(function(error) {  
+    console.log('Registration failed with ' + error);
+   }); 
+ } else {
+	 console.warn('Push messaging is not supported');
+ }
+},
+
 initialize_geo = function (callback) {
     mapOptions = {
       center : new google.maps.LatLng(51.5074, 0.1278),
@@ -12,15 +26,13 @@ initialize_geo = function (callback) {
     };
     beeyond_map = new google.maps.Map(bee_map, mapOptions);
 	callback();
+	
  },
  
  hon_img =  "Assets/imgs/small_chrys.png",
  chrys_img = "Assets/imgs/small_hon.png",
  
-    
- 
- 
- 
+
  get_user_position = function () {
 	 shops_location = [[51.5499798,-0.13069319999999607], [51.5492767,-0.07497520000003988], [51.5612228,-0.07357619999993403], [51.5462962,-0.10122030000002269], [51.5567162,-0.056051600000046164]], 
     
@@ -66,20 +78,15 @@ initialize_geo = function (callback) {
     },
     
 
-
-translate_func = function () {
-	alert("this shit is working");
-},
-
 init = function () {
-	google.maps.event.addDomListener(window, "load", initialize_geo(get_user_position));
-//img_blocks.addEventListener("click", translate_func);
-}
+	//google.maps.event.addDomListener(window, "load", initialize_geo(get_user_position));
+	initiate_sw();
+};
 
  return {
-	 init: init()
+	 init: init
  }
 
 }());
 
-app.init
+app.init();
