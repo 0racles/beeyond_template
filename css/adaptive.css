@@ -757,6 +757,45 @@ section.main div.matrix_gallery div.img_blocks span {
     transform: rotate(-4deg);
     top: 0;
 }
+
+.bg {
+    background: rgb(63, 97, 63) !important;
+}
+
+div.section_header ul li {
+	color : #fff !important;
+}
+
+.main {
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 10%;
+}
+
+footer.footer {
+	position : fixed;
+	bottom : 0%;
+	margin-left : 0%;
+	clear: both;
+	width : 100%;
+}
+
+footer.footer div.social_box:nth-child(2n) {
+    right: 350px;
+}
+
+footer.footer div.social_box:nth-child(3n) {
+    right: 300px;
+}
+
+footer.footer div.social_box:nth-child(4n) {
+    right: 250px;
+}
+
+.main div.contact_pane {
+	color : #ccc;
+}
+
 }
 
 /*------------------------------------------------------------------
@@ -821,14 +860,14 @@ section.main div.matrix_gallery div.img_blocks span {
  section.main div.mob_gallery img{
 	 display : block;
 	 height: 191px;
-	 width : 185px;
+	 width : 255px;
 	 margin : auto;
  }
   
   section.main div.mob_gallery div.mob_img{
     display: inline-block;
     height: 191px;
-	width: 45%;
+	width: 85%;
   }
   
   section.main div.mob_gallery div.mob_img ul {
@@ -1016,9 +1055,10 @@ div.info_paper {
 
 #honey_pak {
 	top: 350px;
-	right : 0px;
-	border : none;
-	z-index : 0;
+    right: 0px;
+    border: none;
+    z-index: 0;
+    width: 170px;
 }
 
 #chrys_pak {
@@ -1028,6 +1068,7 @@ div.info_paper {
     top: -180px;
     right: 0px;
 	z-index : 0;
+	width: 170px;
 }
 
 
@@ -1109,8 +1150,8 @@ div.info_paper {
  section.main div.mob_gallery img{
 	 display : block;
 	 height: 191px;
-	 width : 195px;
-	 padding-right : 60px;
+	 /*width : 195px;
+	 padding-right : 60px;*/
  }
  
  /*#chrys_mob_img {
@@ -1124,7 +1165,7 @@ div.info_paper {
   section.main div.mob_gallery div.mob_img{
     display: inline-block;
     height: 191px;
-	width: 45%;
+	/%width: 45%;%/
   }
   
   section.main div.mob_gallery div.mob_img ul {
@@ -1324,10 +1365,11 @@ div.info_paper {
 }
 
 #honey_pak {
-	top: 480px;
-	right : 0px;
-	border : none;
-	z-index : 0;
+	top: 450px;
+    right: 0px;
+    border: none;
+    z-index: 0;
+    width: 150px;
 }
 
 #chrys_pak {
@@ -1337,6 +1379,7 @@ div.info_paper {
     top: -180px;
     right: 0px;
 	z-index : 0;
+	width: 150px;
 }
 
 

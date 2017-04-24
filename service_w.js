@@ -1,6 +1,6 @@
 this.addEventListener("install", function (event) {
     event.waitUntil(
-        caches.open('v4').then(function (cache) {
+        caches.open('v2').then(function (cache) {
          return cache.addAll([
           'index.html',
 		  'find_us.html',
@@ -43,6 +43,7 @@ this.addEventListener("install", function (event) {
 		  'Assets/icons/facebook.png',
 		  'Assets/icons/googleplus.png',
 		  'Assets/icons/linkedin.png',
+		  'Assets/icons/not_bell.png',
 		  'Assets/icons/twitter.png'
           ]);
         })
@@ -50,7 +51,7 @@ this.addEventListener("install", function (event) {
     });
 
 this.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v4'];
+  var cacheWhitelist = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
