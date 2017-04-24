@@ -96,7 +96,7 @@ subscribeUser = function() {
     console.log('User is subscribed: this is the new addition', subscription);
     //event.preventDefault();
     console.log('User is subscribed:', subscription);
-    modal_dialog.textContent = "Thank You For Subscribing!";
+    modal_dialog.style.display = "none";
 
    
     //updateSubscriptionOnServer(subscription);
@@ -112,11 +112,13 @@ subscribeUser = function() {
 },
 
 unsubscribe = function () {
+	modal_dialog.style.display = "none";
 	s_wreg.pushManager.getSubscription().then(function(pushSubscription) {
 		pushSubscription.unsubscribe();
 	}).catch(function (e) {
 		window.Demo.debug.log("unsubscription error: ", e);
 	})
+	
 },
 
 get_user_position = function () {

@@ -70,6 +70,10 @@ app.controller('MainController', ['$scope', function ($scope) {
 			img : 'Assets/icons/googleplus.png'
 		}
 		];*/
+		$scope.contact_pane = {
+			find : "FIND US",
+			beeyond : "BEEYOND WATER LTD"
+		};
 		$scope.ind_images = {
 			beeyond_logo : "Assets/imgs/beeyond_w.png",
 			not_bell : "Assets/icons/not_bell.png"

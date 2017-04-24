@@ -23,8 +23,9 @@
 #not_button img:nth-child(1n) {
    height: 25px;
    text-align: center;
-       position: relative;
-    right: 8px;
+   position: relative;
+   right: 8px;
+   z-index: 999999999999999999999999999999999999999;
 }
 
 .push_not_div::first-line {
