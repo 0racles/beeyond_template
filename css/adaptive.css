@@ -37,8 +37,9 @@ Last change:    24/02/15
   }
   #carousel_img2 {
 	display: block;
-    width: 50%;
+    width: 45%;
     height: 100%;
+    margin: auto;
   }
   #carousel_img3 {
 	  display : block;
@@ -900,7 +901,12 @@ section.main div.matrix_gallery div.img_blocks span {
 	  left: 40%;
   }
   
-  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img { height : 300px; }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img { height : 300px; width : 100%;}
+  
+  #carousel_img2 {
+	  width : 220px;
+	  margin : auto;
+  }
   
   /* find_us.html */
   
@@ -1051,6 +1057,14 @@ div.info_paper {
 	padding-bottom: 80px;
  }
  
+ section.main:after {
+	 content : ".";
+	 display : block;
+	 height : 0;
+	 visibility : hidden;
+	 clear: both;
+ }
+ 
  div.section_header h1 {
     display : none;
  }
@@ -1096,9 +1110,16 @@ div.info_paper {
 	 display : block;
 	 height: 191px;
 	 width : 195px;
-	 margin : auto;
 	 padding-right : 60px;
  }
+ 
+ /*#chrys_mob_img {
+    width: 295px;
+    position: relative;
+    z-index: 1;
+    left: -50px;
+	padding-right: 40px;
+}*/
   
   section.main div.mob_gallery div.mob_img{
     display: inline-block;
@@ -1184,6 +1205,11 @@ div.info_paper {
 }
   
   .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img { height : 300px; }
+  
+  #carousel_img2 {
+	  height : 200px;
+	  margin : auto;
+  }
   
   /* find_us.html */
   
