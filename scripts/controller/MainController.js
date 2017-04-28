@@ -56,6 +56,14 @@ app.controller('MainController', ['$scope', function ($scope) {
 			name : 'Finished Product'
 		}
 		];
+		$scope.more = [
+		  { 
+		  im : 'Assets/imgs/bee_family.jpg'
+		  },
+		   { 
+		  im : 'Assets/imgs/girl_jump.jpg'
+		  }
+		];
 		/*$scope.icons = [
 		{
 			img : 'Assets/icons/facebook.png'
@@ -80,4 +88,6 @@ app.controller('MainController', ['$scope', function ($scope) {
 		};
 		$scope.about = "Call Us SIMPLE!!";
 		$scope.about_paragraph = "Beeyond Water is made for those who love drinking an all natural product. Beeyond Water is made with only natural ingredients and nothing else!";
+		// 
+		
 }]);
