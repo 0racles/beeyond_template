@@ -23,9 +23,10 @@ function urlB64ToUint8Array(base64String) {
 var 
 img_blocks = document.querySelector(".img_blocks"),
 modal_dialog = document.querySelector(".modal-dialog"),
+modal_content = document.querySelector(".modal-content"),
 bee_map = document.getElementById("bee_map"),
 sub_button = document.getElementById("sub_button"),
-unsub_butotn = document.getElementById("unsub_butotn"),
+unsub_button = document.getElementById("unsub_button"),
 thank_you = document.getElementById("thank_you"),
 hon_img =  "Assets/imgs/small_chrys.png",
 chrys_img = "Assets/imgs/small_hon.png",
@@ -34,6 +35,7 @@ get_user_position,
 newLocation,
 s_wreg,
 i = 0,
+y = 0,
 
 initiate_sw =function () {
   if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -43,9 +45,11 @@ initiate_sw =function () {
 	s_wreg = reg;
 	initialize_ui();
   }).catch(function(error) {  
+    initialize_ui();
     console.log('Registration failed with ' + error);
    }); 
  } else {
+	 initialize_ui();
 	 console.warn('Push messaging is not supported');
  }
 },
@@ -65,20 +69,37 @@ initialize_ui = function() {
 		isSubscribed = !(sub === null);
 		if (isSubscribed) {
 			sub_button.disabled = true;
-			unsub_button.disabled = false;
+			sub_button.title = "you're subscribed!";
             unsub_button.title = "disable push messages";
 			
-			unsub_button.addEventListener("click", unsubscribe);
-			//swreg.pushManager.unSubscribe();
+			unsub_button.addEventListener("click", function () { 
+			push_not_div.style.backgroundColor = '#ce0';
+			//modal_dialog.style.display = 'none';
+			//unsubscribe();
+			notification_success();
+			}); 
+			sub_button.addEventListener("click", function () { 
+			push_not_div.style.backgroundColor = '#c0f';
+			modal_dialog.style.display = 'none';
+			//subscribeUser();    
+			});	
 			
 		} else {
 			// enable subscription button
-			sub_button.disabled = false;
-			unsub_button.disabled = true;
             sub_button.title = "Enable push messages";
 	        console.log('user is not subscribed');
 			
-			sub_button.addEventListener("click", subscribeUser);
+			unsub_button.addEventListener("click", function () { 
+			push_not_div.style.backgroundColor = '#ce0';
+			modal_dialog.style.display = 'none';
+			//unsubscribe();
+			}); 
+			
+			sub_button.addEventListener("click", function () { 
+			push_not_div.style.backgroundColor = '#c0f';
+			modal_dialog.style.display = 'none';
+			subscribeUser();    
+			});
 		}
 	})
 },
@@ -96,8 +117,7 @@ subscribeUser = function() {
     console.log('User is subscribed: this is the new addition', subscription);
     //event.preventDefault();
     console.log('User is subscribed:', subscription);
-    modal_dialog.style.display = "none";
-
+    
    
     //updateSubscriptionOnServer(subscription);
 
@@ -106,19 +126,18 @@ subscribeUser = function() {
    
   })
   .catch(function(err) {
-    console.log('Failed to subscribe the user: ', err);
-    
+    console.log('Failed to subscribe the user: ', err);    
   });
 },
 
 unsubscribe = function () {
-	modal_dialog.style.display = "none";
+	//modal_dialog.style.display = "none";
 	s_wreg.pushManager.getSubscription().then(function(pushSubscription) {
 		pushSubscription.unsubscribe();
 	}).catch(function (e) {
 		window.Demo.debug.log("unsubscription error: ", e);
 	})
-	
+	alert("you are now unsubscribed from this service");
 },
 
 get_user_position = function () {
@@ -165,16 +184,24 @@ get_user_position = function () {
       console.log("sorry your postion cannot be found at this time");
     },
 	
+	notification_success = function () {
+		var new_span = document.createElement("span"),
+			span_content = document.createTextNode("Subscription succesful! You can now receive news and updates of your favourite drink");
+			new_span.id = "span_id";
+			new_span.appendChild(span_content);
+		
+		if (push_not_div.hasChildNodes())
+		for (y; y < push_not_div.childNodes.length; y++) {
+			push_not_div.childNodes[y].parentNode.removeChild(push_not_div.childNodes[y]);
+		}
+		push_not_div.appendChild(new_span);
+	},
 	
-	
-    
-
-init = function () {
-	google.maps.event.addDomListener(window, "load", initialize_geo(get_user_position));
-	initiate_sw();
-};
-
- return {
+   init = function () {
+	  google.maps.event.addDomListener(window, "load", initialize_geo(get_user_position));
+	  initiate_sw();
+   };
+   return {
 	 init: init
  }
 
