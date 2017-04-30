@@ -809,3 +809,9 @@ div.info_paper {
     text-align: center;
 }
 
+.alert-success {
+	text-align : center;
+	display : none;
+}
+
+

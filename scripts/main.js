@@ -32,6 +32,7 @@ hon_img =  "Assets/imgs/small_chrys.png",
 chrys_img = "Assets/imgs/small_hon.png",
 push_not_div = document.querySelector(".push_not_div"),
 get_user_position,
+alert_success = document.querySelector(".alert-success"),
 newLocation,
 s_wreg,
 i = 0,
@@ -68,20 +69,22 @@ initialize_ui = function() {
 	s_wreg.pushManager.getSubscription().then(function(sub) {
 		isSubscribed = !(sub === null);
 		if (isSubscribed) {
-			sub_button.disabled = true;
+			//sub_button.disabled = true;
 			sub_button.title = "you're subscribed!";
             unsub_button.title = "disable push messages";
 			
 			unsub_button.addEventListener("click", function () { 
-			push_not_div.style.backgroundColor = '#ce0';
+			//push_not_div.style.backgroundColor = '#ce0';
 			//modal_dialog.style.display = 'none';
 			//unsubscribe();
-			notification_success();
+			notification_existing();
 			}); 
-			sub_button.addEventListener("click", function () { 
-			push_not_div.style.backgroundColor = '#c0f';
-			modal_dialog.style.display = 'none';
+			sub_button.addEventListener("click", function (event) { 
+			//push_not_div.style.backgroundColor = '#ce0';
+			//modal_dialog.style.display = 'none';
+			notification_existing();
 			//subscribeUser();    
+			//event.preventDefault();
 			});	
 			
 		} else {
@@ -89,10 +92,11 @@ initialize_ui = function() {
             sub_button.title = "Enable push messages";
 	        console.log('user is not subscribed');
 			
-			unsub_button.addEventListener("click", function () { 
+			unsub_button.addEventListener("click", function (event) { 
 			push_not_div.style.backgroundColor = '#ce0';
 			modal_dialog.style.display = 'none';
 			//unsubscribe();
+			event.preventDefault();
 			}); 
 			
 			sub_button.addEventListener("click", function () { 
@@ -117,6 +121,7 @@ subscribeUser = function() {
     console.log('User is subscribed: this is the new addition', subscription);
     //event.preventDefault();
     console.log('User is subscribed:', subscription);
+	notification_success();
     
    
     //updateSubscriptionOnServer(subscription);
@@ -127,6 +132,7 @@ subscribeUser = function() {
   })
   .catch(function(err) {
     console.log('Failed to subscribe the user: ', err);    
+	notification_none();
   });
 },
 
@@ -184,16 +190,36 @@ get_user_position = function () {
       console.log("sorry your postion cannot be found at this time");
     },
 	
-	notification_success = function () {
+	notification_success = function (event) {
+		alert_success.style.display = "block";
+		window.setTimeout(function () { alert_success.style.display = "none"; }, 10000);
+	},
+	
+	notification_existing = function (event) {
 		var new_span = document.createElement("span"),
-			span_content = document.createTextNode("Subscription succesful! You can now receive news and updates of your favourite drink");
+			span_content = document.createTextNode("You are already subscribed to Push Notifications");
 			new_span.id = "span_id";
 			new_span.appendChild(span_content);
-		
-		if (push_not_div.hasChildNodes())
-		for (y; y < push_not_div.childNodes.length; y++) {
+
+		if (push_not_div.hasChildNodes()) {
+		while (push_not_div.firstChild) {
 			push_not_div.childNodes[y].parentNode.removeChild(push_not_div.childNodes[y]);
-		}
+			 }
+		   }
+		push_not_div.appendChild(new_span);
+	},
+	
+	notification_none = function (event) {
+		var new_span = document.createElement("span"),
+			span_content = document.createTextNode("Sorry! Your browser doesn't support Push Notification");
+			new_span.id = "span_id";
+			new_span.appendChild(span_content);
+
+		if (push_not_div.hasChildNodes()) {
+		while (push_not_div.firstChild) {
+			push_not_div.childNodes[y].parentNode.removeChild(push_not_div.childNodes[y]);
+			 }
+		   }
 		push_not_div.appendChild(new_span);
 	},
 	
