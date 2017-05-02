@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfTransaction xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Balance>5345.64</Balance>
+    <Credit>5000.00</Credit>
+    <Debit>0</Debit>
+    <Description>MRS R.A LONGE 47970712</Description>
+    <Date>2017-04-11T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>345.64</Balance>
+    <Credit>0</Credit>
+    <Debit>1.13</Debit>
+    <Description>VAT on Account Maintenance Charge</Description>
+    <Date>2017-03-28T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>346.77</Balance>
+    <Credit>0</Credit>
+    <Debit>22.50</Debit>
+    <Description>Account Maintenance Charge</Description>
+    <Date>2017-03-28T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>369.27</Balance>
+    <Credit>0</Credit>
+    <Debit>105.00</Debit>
+    <Description>FIP CHARGES</Description>
+    <Date>2017-03-06T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>474.27</Balance>
+    <Credit>0</Credit>
+    <Debit>11000.00</Debit>
+    <Description>FIP:IB:GTB/LONGE OLUWADARE FO/CORPCORP:P</Description>
+    <Date>2017-03-06T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>11474.27</Balance>
+    <Credit>11000.00</Credit>
+    <Debit>0</Debit>
+    <Description>FIP:UBA/RITA ATINUKE LONGE/TUD  personal</Description>
+    <Date>2017-03-03T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>474.27</Balance>
+    <Credit>0</Credit>
+    <Debit>105.00</Debit>
+    <Description>FIP CHARGES</Description>
+    <Date>2017-03-02T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>579.27</Balance>
+    <Credit>0</Credit>
+    <Debit>11500.00</Debit>
+    <Description>FIP:IB:GTB/LONGE OLUWADARE FO/CORPCORP:F</Description>
+    <Date>2017-03-02T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>12079.27</Balance>
+    <Credit>0</Credit>
+    <Debit>0.55</Debit>
+    <Description>VAT on Account Maintenance Charge</Description>
+    <Date>2017-02-24T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>12079.82</Balance>
+    <Credit>0</Credit>
+    <Debit>11.00</Debit>
+    <Description>Account Maintenance Charge</Description>
+    <Date>2017-02-24T01:00:00Z</Date>
+  </Transaction>
+  <Transaction>
+    <Balance>12090.82</Balance>
+    <Credit>12000.00</Credit>
+    <Debit>0</Debit>
+    <Description>FIP:UBA/RITA ATINUKE LONGE/TUD  Personal</Description>
+    <Date>2017-02-17T01:00:00Z</Date>
+  </Transaction>
+</ArrayOfTransaction>
