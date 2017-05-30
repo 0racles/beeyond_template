@@ -86,25 +86,33 @@ app.controller('MainController', ['$scope', function ($scope) {
 			     img : "Assets/imgs/beeyond_site_2.png",
 				 paragraph : "These are the list of skills used:",
 				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
-				 insert : "Assets/icons/HTML5.png"
+				 insert : "Assets/icons/HTML5.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
 			},
 			{
 			     img : "Assets/imgs/mylite.png",
 				 paragraph : "These are the list of skills used:",
 				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
-				 insert : "Assets/icons/CSS3.png"
+				 insert : "Assets/icons/CSS3.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
 			},
 			{
 			     img : "Assets/imgs/tonkabi.png",
 				 paragraph : "These are the list of skills used:",
 				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
-				 insert : "Assets/icons/jQUERY.png"
+				 insert : "Assets/icons/jQUERY.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
 			},
 			{
 			     img : "Assets/imgs/watchmyback.png",
 				 paragraph : "These are the list of skills used:",
 				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
-				 insert : "Assets/icons/JavaScript.png"
+				 insert : "Assets/icons/JavaScript.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
 			}
 				 ]
 		};

@@ -11,8 +11,10 @@ app.directive('infoButton', function () {
 			  scope.showMe = !scope.showMe;
 			  if (!scope.showMe) {
 				  scope.title = "Hide";
+				  $(".dont_show").show();
 			  } else {
 				  scope.title = "show";
+				  $(".dont_show").hide();
 			  }
 		  }
 	  }

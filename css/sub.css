@@ -40,3 +40,7 @@ header h3 {
 	text-decoration : none;
 	color : #000;
 }
+
+a.tv_display {
+	background : #fff url("../Assets/imgs/imac.png") top left no-repeat;
+}
