@@ -88,6 +88,49 @@ app.controller('MainController', ['$scope', function ($scope) {
 		};
 		$scope.about = "Call Us SIMPLE!!";
 		$scope.about_paragraph = "Beeyond Water is made for those who love drinking an all natural product. Beeyond Water is made with only natural ingredients and nothing else!";
+<<<<<<< HEAD
 		// 
 		
+=======
+		
+		/* for testing Angular" */
+		$scope.content = {
+			heading : "My Portfolio",
+			profile_photo : "Assets/imgs/dare.jpg",
+			body_content : [
+			{
+			     img : "Assets/imgs/beeyond_site_2.png",
+				 paragraph : "These are the list of skills used:",
+				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
+				 insert : "Assets/icons/HTML5.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
+			},
+			{
+			     img : "Assets/imgs/mylite.png",
+				 paragraph : "These are the list of skills used:",
+				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
+				 insert : "Assets/icons/CSS3.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
+			},
+			{
+			     img : "Assets/imgs/tonkabi.png",
+				 paragraph : "These are the list of skills used:",
+				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
+				 insert : "Assets/icons/jQUERY.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
+			},
+			{
+			     img : "Assets/imgs/watchmyback.png",
+				 paragraph : "These are the list of skills used:",
+				 skill_set : "HTML5, CSS3, JavaScript, AngularJS, jQuery, Bootstrap3",
+				 insert : "Assets/icons/JavaScript.png",
+				 title : "Show",
+				 imac : "Assets/imgs/imac.png"
+			}
+				 ]
+		};
+>>>>>>> test_branch
 }]);

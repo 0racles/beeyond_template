@@ -1,26 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-      <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- manifest files and app install banners -->
+	<link rel='manifest' href='manifest.json'>
+    <meta name="msapplication-TileImage" content="img/wmb_144x144.png">
+    <meta name="msapplication-TileColor" content="#e73931">
+	
+    <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="css/sub.css" rel="stylesheet" />
-
+	<link href="css/main.css" rel="stylesheet" />
+	<!--Adaptive styles-->
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
     <!-- Include the AngularJS library -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"</script>-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>	
   </head>
-  <body ng-app="myApp">
-     <header class="header" ng-controller="MainController">
-		<app-info info="content"></app-info>
-		
+  <body ng-app="myApp" class="bg">
+     <header class="header">
+	     <div class="navigator">
+			<div class="site_logo">
+			<h1></h1>
+			    <!--<img src="Assets/imgs/"><a href="#"></a>-->
+			</div>
+		 </div>
 	 </header>
-<<<<<<< HEAD
      <section class="main" ng-controller="MainController">
 	    <div class="section_header">
 		    <div class="section_title">
@@ -29,28 +38,13 @@
 		<div>
 		</div class="menu_section">
 			<span id="span1"></span><span id="span2"></span>
-			<!--<ul>
-			    <a href= "#"><li style="background : #fff; color : red;">Home</li></a>
-				<a href= "n_info.html" ><li>Drinks</li></a>
-				<a href= "our_journey.html" ><li>Keep Up</li></a>
-			</ul>-->
 		    <ul ng-repeat="menu in menus">
 			    <a href= "{{ menu.href }}" ><li> {{ menu.item }}</li></a>
 			</ul>
 		</div>
 		<div class="slide_box">
-=======
-      <section ng-controller="MainController">
-	    <div class="main_div" ng-repeat="cont in content.body_content">
-		  <app-info info="cont"></app-info>
-		  <!--<a ng-src = " {{ cont.imac }} ">-->
-		<div style="position:relative;">  
-		 <svg class="" height='100%' width="100%"><image x="4" y="0" width="100%" height="100%"
-     xlink:href="Assets/imgs/imac.png"/>
-		  <!--<a href="#" class="tv_display">-->
->>>>>>> test_branch
 		    <!-- caroussels here -->
-			 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="position:  absolute; margin: auto; width: 170px; height: 100px;top: -140px;">
+			 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Carousel indicators --
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -60,7 +54,13 @@
 			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<info-button source="cont"><info-button>
+					<img src="Assets/imgs/girl_run.jpg" alt="First Slide" id="carousel_img1">
+				</div>
+				<div class="item">
+					<img src="Assets/imgs/girl_drink.jpg" alt="Second Slide" id="carousel_img2">
+				</div>
+				<div class="item">
+					<img src="Assets/imgs/new_family.jpg" alt="Third Slide" id="carousel_img3">
 				</div>
 			</div>
 			<!-- Carousel controls --
@@ -69,9 +69,10 @@
 			</a>
 			<a class="carousel-control right" href="#myCarousel" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>-->   
+			</a>-->
+			</div>   
 		</div>
-		<div>
+		<div class="notice_box">
 		   <!-- caroussels here -->
 			 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Carousel indicators --
@@ -83,33 +84,76 @@
 			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<h3></h3>
+					<h3>HEALTHY</h3>
 				</div>
 				<div class="item">
-					<h3></h3>
+					<h3>REFRESHING</h3>
 				</div>
 				<div class="item">
-					<h3></h3>
+					<h3>FOR THE WHOLE FAMILY</h3>
 				</div>
 			</div>
-			<!-- Carousel controls -->
+			<!-- Carousel controls --
 			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
 			</a>
 			<a class="carousel-control right" href="#myCarousel" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
+			</a>-->
 			</div>  
-		   </div>
-		  </svg>
+			<a href="find_us.html" type="submit" class="test">Find Us</a>
 		</div>
-	    </div>
-	</section>   
-	 
-
+		<div class="content_box">
+		    <h4> {{ about }} </h4>
+			<p> {{ about_paragraph }} </p>
+		
+		</div>
+		<div class="matrix_gallery">
+		    <div class="img_blocks" ng-repeat="photo in photos">
+		       <span class="s13imageItemzoom">  {{ photo.name }}</span>
+			   <img class="img_opacity" ng-src = "{{ photo.image  }}">
+			   <span> {{ photo.plus }} </span>
+			</div>
+		</div>
+		<div class="mob_gallery img_blocks">
+		   <div class="mob_img">
+		      <img src="Assets/imgs/hon_cran_pak.jpeg" id="chrys_mob_img">
+			  <ul>
+			      <li>Honey</li>
+				  <li>+</li>
+				  <li>Cranberry</li>
+				  <li>+</li>
+				  <li>Water</li>
+			  </ul>
+		   </div>
+		   <div class="mob_img">
+			  <img src="Assets/imgs/cin_chrys_pak.jpeg">
+			  <ul>
+			      <li>Cinnamon</li>
+				  <li>+</li>
+				  <li>Chrysanthemum</li>
+				  <li>+</li>
+				  <li>Water</li>
+			  </ul>
+		   </div>
+		</div>
+	 </section>
+	 <footer class="footer">
+	    <p> © 2017 by Beeyond Water.<span style="text-decoration:underline;"><a href="#"> Conditions for Use</a></span></p>
+			<div class="social_box" >
+				<img src="Assets/icons/facebook.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/twitter.png">
+			</div>
+			<div class="social_box" >
+				<img src="Assets/icons/linkedin.png">
+			</div>
+		
+	 </footer>
+	
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controller/MainController.js"></script>
-	<script src="scripts/directive/appInfo.js"></script>
-	<script src="scripts/directive/infoButton.js"></script>
+	<script src="scripts/main.js"></script>
   </body>
 </html>

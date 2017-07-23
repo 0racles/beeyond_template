@@ -1,0 +1,46 @@
+header h3 {
+	text-align : center;
+}
+
+.main_div {
+    width: 100%;
+    border: 40px solid beige;
+}
+
+.img {
+	display : block;
+	width : 90%;
+	margin : auto;
+}
+
+.circle {
+	border-radius: 100%;
+    width: 10%;
+    display: block;
+}
+
+.prof_img {
+	margin: auto;
+}
+
+.skill_info {
+	display: block;
+	cursor : pointer;
+	text-align : center;
+    color: blue;
+}
+
+/*.skill_info:active {
+	transition : 8s;
+	cursor : pointer;
+	padding : 10px;
+}*/
+
+.skill_info a {
+	text-decoration : none;
+	color : #000;
+}
+
+a.tv_display {
+	background : #fff url("../Assets/imgs/imac.png") top left no-repeat;
+}
