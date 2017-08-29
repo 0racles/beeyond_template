@@ -1,6 +1,6 @@
 this.addEventListener("install", function (event) {
     event.waitUntil(
-        caches.open('v1').then(function (cache) {
+        caches.open('v2').then(function (cache) {
          return cache.addAll([
           'index.html',
 		  'find_us.html',
@@ -33,25 +33,28 @@ this.addEventListener("install", function (event) {
 		  'Assets/imgs/whole_family.jpg',
 		  'Assets/imgs/water.jpg',
 		  'Assets/imgs/small_chrys.jpeg',
-          'Assets/imgs/ife.png',
-          'Assets/imgs/pin.png',
-          'Assets/imgs/small_chrys.png',
-          'Assets/imgs/small_honey.png',
-          'Assets/imgs/shelf.png',
-          'Assets/imgs/site_logo.png',
+          	  'Assets/imgs/ife.png',
+          	  'Assets/imgs/pin.png',
+          	  'Assets/imgs/small_chrys.png',
+          	  'Assets/imgs/small_honey.png',
+          	  'Assets/imgs/shelf.png',
+          	  'Assets/imgs/site_logo.png',
+		  'Assets/icons/mellsa.png',
 		  'Assets/icons/b_w_logo.png',
 		  'Assets/icons/facebook.png',
 		  'Assets/icons/googleplus.png',
 		  'Assets/icons/linkedin.png',
 		  'Assets/icons/not_bell.png',
 		  'Assets/icons/twitter.png'
+		
+		 
           ]);
         })
         );
     });
 
 this.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v1'];
+  var cacheWhitelist = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
@@ -80,8 +83,8 @@ self.addEventListener('push', function(event) {
 
   const title = 'Beeyond Water Update';
   const options = {
-    body: 'Beeyond Water will be coming to your Area soon.',
-   icon: 'Assets/imgs/b_w_logo.png',
+    body: 'Claim your Free Water Saving Device.',
+   icon: 'Assets/imgs/mellsa.png',
     badge: 'Assets/imgs/hon_cran_pak.jpeg'
   };
 
